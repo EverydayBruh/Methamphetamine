@@ -7,7 +7,6 @@ public class SlimeJump : MonoBehaviour
 {
     public float JumpSpeed = 10;
     public Rigidbody2D myRigidbody;
-    public bool isOnGround;
 
     [Header("Player Animation Settings")]
     public Animator animator;
@@ -22,14 +21,9 @@ public class SlimeJump : MonoBehaviour
     {
         animator.SetFloat("Vertical Move", Mathf.Abs(myRigidbody.velocity.y));
 
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
+        if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(myRigidbody.velocity.y) < 0.01)
         {
             myRigidbody.velocity = Vector2.up * JumpSpeed;
-            isOnGround = false;
         }
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        isOnGround = true;
     }
 }
