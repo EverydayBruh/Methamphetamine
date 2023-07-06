@@ -8,6 +8,9 @@ public class SlimeJump : MonoBehaviour
     public float JumpSpeed = 10;
     public Rigidbody2D myRigidbody;
     public bool isOnGround;
+
+    [Header("Player Animation Settings")]
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +20,8 @@ public class SlimeJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.SetFloat("Vertical Move", Mathf.Abs(myRigidbody.velocity.y));
+
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {
             myRigidbody.velocity = Vector2.up * JumpSpeed;

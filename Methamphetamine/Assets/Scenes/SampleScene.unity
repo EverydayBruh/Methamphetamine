@@ -169,7 +169,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.92, y: 11.41}
+    oldSize: {x: 11.2, y: 13.12}
     newSize: {x: 8.92, y: 11.41}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -178,6 +178,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.87, y: 8.31}
   m_EdgeRadius: 0
+--- !u!95 &281031856
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281031848}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 23dfb6730496dd64db699c4c646bf631, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +433,10 @@ PrefabInstance:
       value: Slime
       objectReference: {fileID: 0}
     - target: {fileID: 8966550487334730581, guid: 6f2864e78697ea643a43ead8e73777b6, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 281031856}
+    - target: {fileID: 8966550487334730581, guid: 6f2864e78697ea643a43ead8e73777b6, type: 3}
       propertyPath: JumpSpeed
       value: 12
       objectReference: {fileID: 0}
@@ -422,4 +447,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6423119040957417577, guid: 6f2864e78697ea643a43ead8e73777b6, type: 3}
       insertIndex: 3
       addedObject: {fileID: 281031852}
+    - targetCorrespondingSourceObject: {fileID: 6423119040957417577, guid: 6f2864e78697ea643a43ead8e73777b6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 281031856}
   m_SourcePrefab: {fileID: 100100000, guid: 6f2864e78697ea643a43ead8e73777b6, type: 3}
