@@ -15,6 +15,6 @@ public class LevelFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(0, target.position.y, -10f);
+        transform.position = new Vector3(0, target.position.y, 0);
     }
 }
