@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RemovePlateScript : MonoBehaviour
 {
-    public GameObject Slime;
+    private GameObject Slime;
     public float RemoveHeight = 4;
     // Start is called before the first frame update
     void Start()

@@ -14,7 +14,7 @@ public class SpawnPlateScript : MonoBehaviour
     private float next_spawn;
     private int k = 0;
     private float timer;
-    private float spawntime = 0.5f;
+    private float spawntime = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -26,9 +26,8 @@ public class SpawnPlateScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
         max_hight = Mathf.Max(max_hight, transform.position.y + spawn_radius);
-        if(next_spawn < max_hight && timer > spawntime)
+        if(next_spawn < max_hight )
         {
             SpawnPlate();
         }
