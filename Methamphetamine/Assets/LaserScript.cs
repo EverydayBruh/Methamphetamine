@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LaserScript : MonoBehaviour
 {
-    public AnimationCurve curve;
+    public AnimationCurve[] curves;
     public float time_multiplyer;
     public SpriteRenderer spriteRenderer;
     public BoxCollider2D collider;
@@ -21,9 +21,9 @@ public class LaserScript : MonoBehaviour
     void Update()
     {
         timer = (timer + Time.deltaTime*time_multiplyer)%cycletime;
-        Debug.Log(curve.Evaluate(timer));
-        if (curve.Evaluate(timer) > 0.5)
-        { LaserOn(); } else { LaserOff(); }
+       // Debug.Log(curve.Evaluate(timer));
+       // if (curve.Evaluate(timer) > 0.5)
+        //{ LaserOn(); } else { LaserOff(); }
     }
 
     void LaserOn()

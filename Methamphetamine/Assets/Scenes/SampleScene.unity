@@ -356,7 +356,7 @@ MonoBehaviour:
   PlateHeight: 3.5
   Plate: {fileID: 5911601703628239457, guid: 8f944ffad37cf8d409a24238f458739d, type: 3}
   hight_offset: 12.2
-  spawn_radius: 100
+  spawn_radius: 28
   StartPlateHeight: -2.52
 --- !u!4 &1829493288
 Transform:
