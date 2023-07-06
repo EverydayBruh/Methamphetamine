@@ -8,7 +8,6 @@ public class Trigger : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            GetComponent<AudioSource>();
             GetComponent<AudioSource>().Play();
         }
     }
