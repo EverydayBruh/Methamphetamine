@@ -7,6 +7,7 @@ public class SlimeJump : MonoBehaviour
 {
     public float JumpSpeed = 10;
     public Rigidbody2D myRigidbody;
+    private bool IsAlive = true;
 
     [Header("Player Animation Settings")]
     public Animator animator;
@@ -21,9 +22,18 @@ public class SlimeJump : MonoBehaviour
     {
         animator.SetFloat("Vertical Move", Mathf.Abs(myRigidbody.velocity.y));
 
-        if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(myRigidbody.velocity.y) < 0.01)
+        if (IsAlive && Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(myRigidbody.velocity.y) < 0.01)
         {
             myRigidbody.velocity = Vector2.up * JumpSpeed;
         }
+    }
+
+    public void death()
+    {
+        IsAlive= false;
+        myRigidbody.velocity = Vector2.zero;
+        myRigidbody.angularVelocity = 1000;
+        animator.enabled= false;
+        
     }
 }
