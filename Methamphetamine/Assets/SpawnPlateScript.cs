@@ -10,6 +10,8 @@ public class SpawnPlateScript : MonoBehaviour
     public float hight_offset = 10;
     public float spawn_radius = 100;
     public float StartPlateHeight = 3.17f;
+    public float randomness = 1;
+
     private float max_hight = 0;
     private float next_spawn;
     private int k = 0;
@@ -40,7 +42,7 @@ public class SpawnPlateScript : MonoBehaviour
     
     void SpawnPlate()
     {
-        Instantiate(Plate,new Vector3(transform.position.x, next_spawn, -0.8802159f), transform.rotation);
+        Instantiate(Plate,new Vector3(transform.position.x, next_spawn + Random.Range(-randomness, randomness), -0.8802159f), transform.rotation);
         next_spawn += hight_offset;
         timer = 0;
     }
